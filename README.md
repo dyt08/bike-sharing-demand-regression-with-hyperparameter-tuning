@@ -1,5 +1,5 @@
 ## **Predicting Bike Sharing Demand with Regression Models** 
----
+
 By Aditya Nugraha
 
 <img src="assets/7532.jpg" alt="image: https://www.freepik.com/vectors/ride-bicycle"/>
@@ -7,7 +7,6 @@ By Aditya Nugraha
 *Image Source: https://www.freepik.com/vectors/ride-bicycle*
 
 ### **Contents**
----
 
 1. Business Problem Understanding
 2. Data Understanding
@@ -50,7 +49,6 @@ Evaluasi metrik yang kita gunakan yang paling difokuskan adalah RMSE dan RMSLE, 
 Semakin kecil nilai RMSLE, MAE, dan MAPE yang dihasilkan, berarti model semakin akurat dalam memprediksi banyaknya penyewa sepeda dengan limitasi fitur yang digunakan. 
 
 ### **Data Understanding**
----
 
 Sistem penyewaan sepeda sangat berkorelasi dengan kondisi lingkungan dan musim. Misalnya, kondisi cuaca,
 curah hujan, hari dalam seminggu, musim, jam dalam sehari, dll. hal tersebut dapat mempengaruhi perilaku penyewa apakah seseorang dengan kondisi tersebut ingin menyewa sepeda atau tidak.
@@ -73,7 +71,6 @@ curah hujan, hari dalam seminggu, musim, jam dalam sehari, dll. hal tersebut dap
 |cnt|Integer|Count of hourly total rental bikes including both casual and registered (Target variable)|
 
 ### **EDA & Feature Engineering**
----
 
 - Beradasarkan penelitian yang dilakukan, dataset yang digunakan tidak memiliki NaN maupun data terduplikat.
 - Kami juga menghapus kolom `casual` dan `registered` karena 2 kolom tersebut telah terwakilkan oleh kolom target yaitu `cnt`
@@ -82,7 +79,6 @@ curah hujan, hari dalam seminggu, musim, jam dalam sehari, dll. hal tersebut dap
 - Untuk EDA standar lainnya kami juga mengecek menggunakan plot kategori dan plot distribusi pada masing-masing tabel yang berjenis kategori dan berjenis numerik.
 
 ### **Modeling**
----
 
 **Date Extraction**
 
@@ -141,7 +137,6 @@ Pada tahap ini kami mencari fitur apa saja yang paling memengaruhi kolom target 
 Kami juga mengecek secara langsung sekaligus membandingkan nilai aktual dengan hasil prediksi menggunakan model sebelum dituning dan setelah dituning 
 
 ### **Conclusion**
----
 
 Berdasarkan pemodelan yang telah kita lakukan dapat disimpulkan bahwa model yang kita gunakan memiliki kecenderungan semakin tinggi nilainya maka akan semakin menyebar, hal ini memungkinkan karena terdapat limitasi pada dataset yang memiliki kecenderungan serupa.
 
@@ -152,7 +147,6 @@ Berdasarkan metrik yang digunakan pada penelitian ini yaitu RMSE, RMSLE, MAE, da
 untuk MAE dan MAPE sendiri mirip seperti RMSE dan RMSLE, untuk perbedaannya MAE mengambil nilai absolutnya, sedangkan RMSE mengambil nilai kudaratiknya. untuk MAPE sendiri dihasilkan dari presentase nilai eror yang dihasilkan dari MAE.
 
 ### **Recommendation**
----
 
 Untuk mengembangkan model agar dapat menjadi lebih baik lagi dapat dilakukan hal-hal berikut ini:
 1. Mengecek performa pada model lain yang tidak kita gunakan saat ini seperti Ridge, Lasso, ataupun yang lebih kompleks seperti Neural Network, dll. hal ini dapat meningkatkan kemungkinan adanya model yang berpotensi menjadi lebih baik lagi. terutama pada model LightGBM yang tidak jadi dipakai karena masalah kompatibilitas, bisa dibuatkan fungsi untuk pengecekan performa model agar dapat mengeluarkan metrik dari RMSLE yang telah kita jadikan acuan utama pada penelitian ini.
@@ -164,6 +158,5 @@ Untuk mengembangkan model agar dapat menjadi lebih baik lagi dapat dilakukan hal
 1. Dataset yang digunakan memungkinkan kita untuk melakukan 'anomaly detection', yaitu melakukan pendeteksian jika terjadi hal diluar kebiasaan, misal seperti jam 1 malam yang seharusnya hanya sedikit atau mungkin tidak ada sama sekali yang menyewa sepeda namun yang terjadi saat itu adalah sebaliknya, sepeda yang disewa pada saat itu malah sangat tinggi yang mungkin disebabkan oleh faktor eksternal seperti misalnya adanya konser ataupun acara besar lainnya didekat lokasi penyewaan sepeda pada waktu tersebut, hal ini membuat sistem mendeteksi adanya kebiasaan yang tidak wajar, fungsinya sendiri karena penyewaan sepeda ini dilakukan secara online dan terintegrasi maka penyedia penyewaan sepeda dapat secara cepat melakukan distribusi pada area tersebut jika memungkinkan.
 
 ### **Save, Load, Predict Model with Pickle**
----
 
 Merupakan tahap terakhir, pada tahap ini kami melakukan penyimpanan model yang telah kita lakukan sebelumnya dengan model yang digunakan adalah model setelah di tuning, kami juga mempersiapkan koding yang dapat digunakan jika ingin mengetes data baru.
