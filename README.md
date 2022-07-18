@@ -2,7 +2,7 @@
 ---
 By Aditya Nugraha
 
-<img src="assets/5243.jpg" alt="image: https://www.freepik.com/vectors/ride-bicycle"/>
+<img src="assets/7532.jpg" alt="image: https://www.freepik.com/vectors/ride-bicycle"/>
 
 *Image Source: https://www.freepik.com/vectors/ride-bicycle*
 
